@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <HelloWorld />
+    <keep-alive exclude="Detail">
+      <router-view></router-view>
+    </keep-alive>
+    <main-tab-bar></main-tab-bar>
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
+import MainTabBar from '@/components/content/mainTabBar/MainTabBar.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    MainTabBar,
   },
 }
 </script>
